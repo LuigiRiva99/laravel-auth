@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('title', 150);
-            $table->string('slug')->unique();
-            $table->text('content')->nullable();
+            $table->text('description')->nullable();
+            $table->string('link');
             $table->timestamps();
         });
     }

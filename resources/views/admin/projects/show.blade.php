@@ -22,8 +22,8 @@
                         <tr class="p-3">
                             <td>{{$project->id}}</td>
                             <td>{{$project->title}}</td>
-                            <td>{{$project->slug}}</td>
-                            <td>{{$project->content}}</td>
+                            <td>{{$project->description}}</td>
+                            <td>{{$project->link}}</td>
                         </tr>    
                     </tbody>
                 </table>

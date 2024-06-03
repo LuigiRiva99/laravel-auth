@@ -8,6 +8,7 @@
             <div class="container">
                 <div class="col-auto">
                     <h1>page index</h1>
+                    <a class="btn btn-primary" href="{{route('admin.projects.create')}}">Add Project</a>
                 </div>
             </div>
             <div class="container">
@@ -25,8 +26,8 @@
                         <tr class="p-3">
                             <td>{{$project->id}}</td>
                             <td><a href="{{route('admin.projects.show', $project)}}"> {{$project->title}} </a></td>
-                            <td>{{$project->slug}}</td>
-                            <td>{{$project->content}}</td>
+                            <td>{{$project->description}}</td>
+                            <td>{{$project->link}}</td>
                     @endforeach
                     </tbody>
                 </table>

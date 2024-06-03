@@ -17,8 +17,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
-                        <th>Slug</th>
-                        <th>content</th>
+                        <th>Description</th>
+                        <th>Link</th>
                     </tr>
                     </thead>
                     <tbody  class="table-group-divider table-hover table-striped">
@@ -28,6 +28,7 @@
                             <td><a href="{{route('admin.projects.show', $project)}}"> {{$project->title}} </a></td>
                             <td>{{$project->description}}</td>
                             <td>{{$project->link}}</td>
+                            <td><a class="btn btn-primary" href="{{route('admin.projects.show', $project)}}">details </a></td>
                     @endforeach
                     </tbody>
                 </table>

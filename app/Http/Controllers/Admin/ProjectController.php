@@ -51,7 +51,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -59,7 +59,13 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $data = $request->all();
+
+        $project->fill($data);
+
+        $project->save();
+
+        return view('admin.projects.show', compact('project')) ;
     }
 
     /**

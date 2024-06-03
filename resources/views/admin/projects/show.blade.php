@@ -27,6 +27,9 @@
                         </tr>    
                     </tbody>
                 </table>
+                <div>
+                    <a class="btn btn-info" href="{{ route('admin.projects.edit', $project) }}">Edit</a>
+                </div>
             </div>
         </section>
     </main>

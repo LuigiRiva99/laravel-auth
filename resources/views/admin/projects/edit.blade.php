@@ -5,16 +5,17 @@
 <main>
   <section>
     <div class="container">
-        <h2 class="fs-2">Aggiungi Progetto</h2>
+        <h2 class="fs-2">Edit</h2>
     </div>
     <div class="container">
-        <form  action="{{ route('admin.projects.store') }}" method="POST">
+        <form  action="{{ route('admin.projects.update', $project) }}" method="POST">
             {{-- Cross Site Request Forgering --}}
             @csrf 
+            @method('PUT')
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Project title">
+                <input type="text" name="title" class="form-control" id="title" placeholsder="Project title">
             </div>
 
             <div class="mb-3">
@@ -27,7 +28,7 @@
                 <input type="text" name="link" class="form-control" id="link" placeholder="link">
             </div>
 
-            <button class="btn btn-primary">Aggiungi</button>
+            <button class="btn btn-primary">Add changes</button>
         </form>
     </div>
   </section>

@@ -32,7 +32,7 @@ Route::middleware(['auth', 'verified'])
     })->name('dashboard');
 
     //CRUD
-    Route::resource('posts',ProjectController::class);
+    Route::resource('projects',ProjectController::class);
 
 });
 

@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'index')
-
 @section('content')
     <main>
         <section>
             <div class="container">
                 <div class="col-auto">
-                    <h1>page index</h1>
+                    <h1>page show</h1>
                 </div>
             </div>
             <div class="container">
@@ -21,13 +19,12 @@
                     </tr>
                     </thead>
                     <tbody  class="table-group-divider table-hover table-striped">
-                    @foreach ($projects as $project)
                         <tr class="p-3">
                             <td>{{$project->id}}</td>
                             <td>{{$project->title}}</td>
                             <td>{{$project->slug}}</td>
                             <td>{{$project->content}}</td>
-                    @endforeach
+                        </tr>    
                     </tbody>
                 </table>
             </div>
